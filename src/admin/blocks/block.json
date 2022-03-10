@@ -1,0 +1,10 @@
+{
+  "apiVersion": 2,
+  "name": "wp-sso-firebase/login",
+  "title": "Login",
+  "description": "Shows a login form including providers you have enabled in Firebase.",
+  "icon": "universal-access-alt",
+  "category": "layout",
+  "textdomain": "sso-firebase",
+  "editorScript": "file:./index.js"
+}
