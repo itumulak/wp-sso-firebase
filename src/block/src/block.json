@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "wp-sso-login/block",
+	"version": "0.1.0",
+	"title": "Firebase Login",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "Shows a login form including providers you have enabled in Firebase.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

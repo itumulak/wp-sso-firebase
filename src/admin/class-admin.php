@@ -23,7 +23,6 @@ class Admin extends Admin_Config {
 	public function init() {
 		add_action( 'admin_menu', array( $this, 'admin_menu' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_scripts' ) );
-//		add_action( 'init', array( $this, 'register_block' ) );
     }
 
 	/**
@@ -67,10 +66,6 @@ class Admin extends Admin_Config {
 	 */
 	public function admin_page() {
 		echo get_admin_template_part( 'template', 'admin' );
-	}
-
-	public function register_block() {
-		register_block_type( $this->get_plugin_dir() . 'src/admin/blocks/block.json' );
 	}
 }
 
