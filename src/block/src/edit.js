@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import {InspectorControls, useBlockProps} from '@wordpress/block-editor';
+import {useBlockProps} from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -20,8 +20,7 @@ import {InspectorControls, useBlockProps} from '@wordpress/block-editor';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
-import {Panel, PanelBody} from "@wordpress/components";
-import Providers from "./components/Providers";
+import Providers from "./components/SettingsProviders";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -34,15 +33,9 @@ import Providers from "./components/Providers";
 export default function Edit() {
 	return (
 		<div {...useBlockProps()}>
-			<InspectorControls>
-				<Panel>
-					<PanelBody title='Providers'>
-						<Providers/>
-					</PanelBody>
-				</Panel>
-			</InspectorControls>
+			<Providers/>
 			<p>
-				{__('Block – hello from the editor!!', 'block')}
+				{__('Block – hello from the editor!', 'block')}
 			</p>
 		</div>
 
