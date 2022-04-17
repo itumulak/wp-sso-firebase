@@ -51,10 +51,6 @@ export default function Edit({attributes, setAttributes}) {
 					   onChangeGoogle={googleHandler}/>
 			{attributes.google && <ProviderGoogle/>}
 			{attributes.facebook && <ProviderFacebook/>}
-			<p>
-
-				{__(`Block – hello from the editor! ${attributes.google} hi!!`, 'block')}
-			</p>
 		</div>
 
 	);
