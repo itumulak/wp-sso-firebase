@@ -22,6 +22,7 @@ import {useBlockProps} from '@wordpress/block-editor';
 import './editor.scss';
 import Providers from "./components/SettingsProviders";
 import ProviderGoogle from "./components/ProviderGoogle";
+import ProviderFacebook from "./components/ProviderFacebook";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -49,6 +50,7 @@ export default function Edit({attributes, setAttributes}) {
 					   onChangeFacebook={facebookHandler}
 					   onChangeGoogle={googleHandler}/>
 			{attributes.google && <ProviderGoogle/>}
+			{attributes.facebook && <ProviderFacebook/>}
 			<p>
 
 				{__(`Block – hello from the editor! ${attributes.google} hi!!`, 'block')}

@@ -1,0 +1,13 @@
+.btn {
+  &-facebook {
+	color: white;
+	background-color: #4267b2;
+	text-transform: none;
+
+	img {
+	  margin-left: -20px;
+	  margin-right: 12px;
+	  height: 24px;
+	}
+  }
+}

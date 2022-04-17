@@ -1,4 +1,4 @@
-import classes from "./ProviderGoogle.module.css";
+import classes from "./Base.module.scss";
 import svg from "../../../../assets/google-logo.svg";
 
 const ProviderGoogle = () => {
