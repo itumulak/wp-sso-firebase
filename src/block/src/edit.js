@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-i18n/
  */
-import { __ } from '@wordpress/i18n';
+import {__} from '@wordpress/i18n';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -30,12 +30,26 @@ import Providers from "./components/SettingsProviders";
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
+	const {google, facebook} = attributes;
+
+	const facebookHandler = (facebook) => {
+		setAttributes({facebook});
+	}
+
+	const googleHandler = (google) => {
+		setAttributes({google});
+	}
+
 	return (
 		<div {...useBlockProps()}>
-			<Providers/>
+			<Providers facebook={facebook}
+					   google={google}
+					   onChangeFacebook={facebookHandler}
+					   onChangeGoogle={googleHandler}/>
 			<p>
-				{__('Block – hello from the editor!', 'block')}
+
+				{__(`Block – hello from the editor! ${attributes.google} hi!!`, 'block')}
 			</p>
 		</div>
 

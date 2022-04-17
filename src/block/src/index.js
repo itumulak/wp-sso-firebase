@@ -26,6 +26,16 @@ import save from './save';
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 registerBlockType('wp-sso-login/block', {
+	attributes: {
+		facebook: {
+			default: false,
+			type: 'boolean'
+		},
+		google: {
+			default: true,
+			type: 'boolean'
+		}
+	},
 	/**
 	 * @see ./edit.js
 	 */
