@@ -9,6 +9,7 @@ const Providers = (props) => {
 					<Panel>
 						<CheckboxControl label='Facebook' checked={props.facebook} onChange={props.onChangeFacebook}/>
 						<CheckboxControl label='Google' checked={props.google} onChange={props.onChangeGoogle}/>
+						<CheckboxControl label='Login Form' checked={props.user_login} onChange={props.onChangeUserLogin}/>
 					</Panel>
 				</PanelBody>
 			</InspectorControls>

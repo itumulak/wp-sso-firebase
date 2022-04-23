@@ -34,7 +34,7 @@ import ProviderUserForm from "./components/ProviderUserForm";
  * @return {WPElement} Element to render.
  */
 export default function Edit({attributes, setAttributes}) {
-	const {google, facebook} = attributes;
+	const {google, facebook, user_login} = attributes;
 
 	const facebookHandler = (facebook) => {
 		setAttributes({facebook});
@@ -44,15 +44,21 @@ export default function Edit({attributes, setAttributes}) {
 		setAttributes({google});
 	}
 
+	const userLoginHandler = (user_login) => {
+		setAttributes({user_login});
+	}
+
 	return (
 		<div {...useBlockProps()}>
 			<Providers facebook={facebook}
 					   google={google}
+					   user_login={user_login}
 					   onChangeFacebook={facebookHandler}
-					   onChangeGoogle={googleHandler}/>
+					   onChangeGoogle={googleHandler}
+					   onChangeUserLogin={userLoginHandler}/>
 			{attributes.google && <ProviderGoogle/>}
 			{attributes.facebook && <ProviderFacebook/>}
-			<ProviderUserForm/>
+			{attributes.user_login && <ProviderUserForm/>}
 		</div>
 
 	);

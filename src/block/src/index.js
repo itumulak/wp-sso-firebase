@@ -28,10 +28,14 @@ import save from './save';
 registerBlockType('wp-sso-login/block', {
 	attributes: {
 		facebook: {
-			default: false,
+			default: true,
 			type: 'boolean'
 		},
 		google: {
+			default: true,
+			type: 'boolean'
+		},
+		user_login: {
 			default: true,
 			type: 'boolean'
 		}
