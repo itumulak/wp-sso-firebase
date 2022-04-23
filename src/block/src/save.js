@@ -14,6 +14,7 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 import ProviderGoogle from "./components/ProviderGoogle";
 import ProviderFacebook from "./components/ProviderFacebook";
+import ProviderUserForm from "./components/ProviderUserForm";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -25,12 +26,13 @@ import ProviderFacebook from "./components/ProviderFacebook";
  * @return {WPElement} Element to render.
  */
 export default function save({attributes}) {
-	const {google, facebook} = attributes;
+	const {google, facebook, user_login} = attributes;
 
 	return (
 		<div {...useBlockProps.save()}>
 			{google && <ProviderGoogle/>}
 			{facebook && <ProviderFacebook/>}
+			{user_login && <ProviderUserForm/>}
 		</div>
 	);
 }

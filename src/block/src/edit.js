@@ -56,9 +56,9 @@ export default function Edit({attributes, setAttributes}) {
 					   onChangeFacebook={facebookHandler}
 					   onChangeGoogle={googleHandler}
 					   onChangeUserLogin={userLoginHandler}/>
-			{attributes.google && <ProviderGoogle/>}
-			{attributes.facebook && <ProviderFacebook/>}
-			{attributes.user_login && <ProviderUserForm/>}
+			{google && <ProviderGoogle/>}
+			{facebook && <ProviderFacebook/>}
+			{user_login && <ProviderUserForm/>}
 		</div>
 
 	);
