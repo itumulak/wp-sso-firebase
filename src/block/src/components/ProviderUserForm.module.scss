@@ -1,0 +1,49 @@
+.login {
+  width: 320px;
+  margin: auto;
+
+  form {
+	margin-top: 20px;
+	margin-left: 0;
+	padding: 26px 24px 34px;
+	font-weight: 400;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 4%);
+  }
+
+  label {
+	font-size: 14px;
+	line-height: 1.5;
+	display: inline-block;
+	margin-bottom: 3px;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+	font-size: 24px;
+	line-height: 1.33333333;
+	width: 100%;
+	border-width: .0625rem;
+	padding: .1875rem .3125rem;
+	margin: 0 6px 16px 0;
+	min-height: 40px;
+	max-height: none;
+  }
+
+  input[type="submit"] {
+	background: #2271b1;
+	border-color: transparent;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: none;
+	padding: 5px 12px;
+	border-radius: 3px;
+  }
+
+  .space-between {
+	display: flex;
+	justify-content: space-between;
+  }
+}

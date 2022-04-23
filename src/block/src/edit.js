@@ -23,6 +23,7 @@ import './editor.scss';
 import Providers from "./components/SettingsProviders";
 import ProviderGoogle from "./components/ProviderGoogle";
 import ProviderFacebook from "./components/ProviderFacebook";
+import ProviderUserForm from "./components/ProviderUserForm";
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -51,6 +52,7 @@ export default function Edit({attributes, setAttributes}) {
 					   onChangeGoogle={googleHandler}/>
 			{attributes.google && <ProviderGoogle/>}
 			{attributes.facebook && <ProviderFacebook/>}
+			<ProviderUserForm/>
 		</div>
 
 	);
